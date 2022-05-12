@@ -7,7 +7,7 @@ function onInit(){
 // Write data
 setInterval(function() {
   f.write(getTime().toFixed(0)+","+analogRead(D29)+","+analogRead(D30)+","+analogRead(D31)+"\n");
-}, 5*1000);
+}, 60*5*1000); //data logging interval (in milliseconds) set for 5 minutes. 
 
 function getData(callback) {
   var f = require("Storage").open("log","r");
