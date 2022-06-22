@@ -33,7 +33,7 @@ setInterval(function() {
   if((require("Storage").getFree()<28671)&&(require("Storage").getFree()>5000)){
   f.write(getTime().toFixed(0)+","+analogRead(D29)+","+analogRead(D30)+","+analogRead(D31)+"\n");
   } pulldowns();
-}, 60*60*1000); //data logging interval (in milliseconds) set for 5 minutes. 
+}, 60*60*1000); //data logging interval (in milliseconds) set for 60 minutes. 
 
 function getData(callback) {
   var f = require("Storage").open("log","r");
